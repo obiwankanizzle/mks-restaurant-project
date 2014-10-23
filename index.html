@@ -8,7 +8,7 @@
 
         <!-- Google Fonts -->
         <!-- TODO We're going to use the Google Font 'Bitter'. https://www.google.com/fonts#UsePlace:use/Collection:Bitter Link to it here -->
-        <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Bitter">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
         <!-- Foundation CSS -->
         <!-- TODO link to foundation's normalize.css -->
         <!-- TODO link to foundation's foundation.min.css -->
@@ -107,56 +107,56 @@
                 -->
                 <div class="row">
                 <div class="menu-section-item small-2 columns" id="breakfast">
-                    <h3>Breakfast
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
                         <a href="#breakfast">
-                            <!-- TODO name of menu section -->
+                            Breakfast
                         </a>
                     </h3>
                 </div>
                 <div class="menu-section-item small-2 columns" id="lunch">
-                    <h3>Lunch
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
                         <a href="#lunch">
-                            <!-- TODO name of menu section -->
+                            Lunch
                         </a>
                     </h3>
                 </div>
                 <div class="menu-section-item small-2 columns" id="dinner">
-                    <h3>Dinner
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
                         <a href="#dinner">
-                            <!-- TODO name of menu section -->
+                            Dinner
                         </a>
                     </h3>
                 </div>
                 <div class="menu-section-item small-2 columns" id="dessert">
-                    <h3>Dessert
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
                         <a href="#dessert">
-                            <!-- TODO name of menu section -->
+                            Dessert
                         </a>
                     </h3>
                 </div>
                 <div class="menu-section-item small-2 columns" id="cocktails">
-                    <h3>Cocktails
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
                         <a href="#cocktails">
-                            <!-- TODO name of menu section -->
+                            Cocktails
                         </a>
                     </h3>
                 </div>
-                <div class="menu-section-item small-2 columns" id="wines">
-                    <h3>Wines
+                <div class="menu-section-item small-2 columns" id="wine">
+                    <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
                         <!-- add a class of "menu-section-item" and an ID with the section of the menu that this is, e.g. dinner, breakfast, etc. -->
-                        <a href="#wines">
-                            <!-- TODO name of menu section -->
+                        <a href="#wine">
+                            Wines
                         </a>
                     </h3>
                 </div>
@@ -166,7 +166,7 @@
             <div class="row">
                 <div id="menu-section-content" class="menu-section-content">
                     <!-- TODO we'll add the dinner menu content here. Write two columns with the class .menu-group and the foundation column classes. -->
-                        <div class="menu-group medium-6 large-6 colums">
+                        <!-- <!-- <div class="menu-group medium-6 large-6 colums">
                             <h4>Raw Bar</h4>
                                 <div class="menu-item">
                                     <div class="menu-item-dish">malpeque oyster</div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="menu-group medium-6 large-6 colums">
                             <!-- TODO Inside each .menu-group, there should be an h4 with the title. -->
-                            <h4>Entrees</h4>
+                            <!-- <h4>Entrees</h4>
                                 <div class="menu-item">
                                     <div class="menu-item-dish">carne asada</div>
                                     <p class="menu-item-ingredients">flank steak, grilled onions, “pico de gallo”</p>
@@ -241,13 +241,13 @@
                                     <div class="menu-item-dish">oak grilled filet</div>
                                     <p class="menu-item-ingredients">“rajas”, pasilla red wine reduction</p>
                                     <div class="menu-item-price">36</div>
-                                </div>
+                                </div> -->
                             <!-- TODO for each item on the menu, write a div.menu-item. -->
 
                                 <!-- TODO inside each div.menu-item, there should be a div.menu-item-dish, a p.menu-item-ingredients, and a div.menu-item-price. -->
 
                                 <!-- TODO we are going to do ONLY the "Raw Bar" and "Entrees" section of the dinner menu for now. You can find that content in /menu-content/menu-dinner.md We'll add the rest of the menus with JSON later. -->
-                        </div>
+                        <!-- </div> --> 
                 </div>
             </div>
         </section>
@@ -301,9 +301,18 @@
         <!-- Slick.js Slideshow -->
         <!-- TODO link to the slick.min.js file -->
         
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="js/slick.min.js"></script>
+        
+        
+        
+        <script src="js/slick.min.js"></script>
+        <script type="text/javascript">
+            $("#slides").slick({
+                autoplay: true,
+                autoplaySpeed: 2000, 
+                fade: true,
+                cssEase: 'linear'
+            });
+        </script>
         <!-- TODO pass the div #slides into the .slick() function to make the slideshow work. you'll be able to tell if it works because the images will no longer be a stack; you'll only see the first one. -->
         <!-- TODO by default this slideshow JS doesn't autoplay. can you add the following settings into the slick() function? autoplay: true, autoplaySpeed: 2000, fade: true, cssEase: 'linear'. Check out the http://kenwheeler.github.io/slick/ website for examples and how to's! -->
 
