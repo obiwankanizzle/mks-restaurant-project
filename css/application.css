@@ -64,6 +64,7 @@ section {
     padding: 2em;
     background: #ccc;
     line-height: 1.5em;
+    width: 100%;
 }
 
 
@@ -126,15 +127,22 @@ section {
 .menu-section-item h3 a {
     /* TODO make menu section links a semi-transparent color rgba(34, 28, 18, .75). give them a 3px bottom border and give it a bit of space */
     /* TODO give the menu section links a CSS transition so that when you hover them, the color fades in slowly */
+    
+    color: rgba(34, 28, 18, .75);
+    border-bottom: 3px;
+    
+}
+.menu-section-item:hover {
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+    color: rgba(34, 28, 18, 1.00);
+    /*border-bottom: 3px solid grey;*/
+    padding-bottom: 3px;
 }
-.menu-section-item:hover {
-
-color: rgba(34, 28, 18, .75);
-border-bottom: 3px;
+.is-active {
+    border-bottom: 3px solid grey;
 }
 
 /* TODO on the menu section links, when hovered, make them the same color but 100% opacity instead of 75% (.75) and make the bottom border the same color. */
@@ -143,11 +151,29 @@ border-bottom: 3px;
 
 .menu-section-content {
     /* TODO give this some space below the menu links */
+    margin-bottom: 3px;
 }
 
 
 .menu-item {
     /* TODO give each menu item some bottom margin */
+    margin-bottom: 3px;
+}
+
+.menu-item-dish {
+    font-weight: bold;
+}
+.menu-item-ingredients {
+    font-style: italic;
+    
+    display: inline;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: .50;
+    padding-left: 7px;
+    display: inline;
 }
 
 /* TODO style the menu-item-dish to be bold */
@@ -169,10 +195,27 @@ border-bottom: 3px;
     /* TODO add the dark brown background color, and the background image symbols-bottom. Change the background-position so that the bottom of it shows (where the symbols start to fade out). */
     /* TODO add some top and bottom padding so that the content doesn't overlap the background image. Note how the padding changes the location of the background image. */
 background: #221c12;
+background-image: url('../images/symbols-bottom.png');
+background-repeat: no-repeat;
+background-position: top;
+padding-top: 500px;
+padding-bottom: 50px;
+
+}
+.contact .row {
+    bottom: 0;
+    
 }
 
 /* TODO make the .social-links links be displayed in a row with some space between them. make them 50% opacity, and fade to 100% opacity when you hover over them. */
 
-.social-links {
-    
+
+
+.social a {
+    opacity: .5;
+    display: inline;
+    padding: .3em;
+}
+.social:hover a:hover {
+    opacity: 1; 
 }
